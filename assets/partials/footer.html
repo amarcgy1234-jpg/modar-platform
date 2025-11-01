@@ -1,0 +1,242 @@
+<footer class="site-footer" dir="rtl">
+  <style>
+    .site-footer {
+      background: linear-gradient(135deg, #0f2a33 0%, #163b47 100%);
+      color: #f6fbfb;
+      margin-top: 64px;
+      font-family: "Cairo", "Tahoma", sans-serif;
+    }
+
+    .site-footer .footer-container {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+      padding: 48px 0 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .site-footer .footer-top {
+      display: flex;
+      gap: 32px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .site-footer .footer-brand {
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .site-footer .footer-brand img {
+      width: 140px;
+      height: auto;
+      filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.35));
+    }
+
+    .site-footer .footer-brand p {
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.95rem;
+    }
+
+    .site-footer .footer-links {
+      min-width: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .site-footer .footer-links h4,
+    .site-footer .partner-logos h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0;
+      color: #dfeff2;
+      letter-spacing: 0.5px;
+    }
+
+    .site-footer .footer-links a {
+      color: rgba(255, 255, 255, 0.82);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease, transform 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .site-footer .footer-links a::before {
+      content: "▸";
+      font-size: 0.8rem;
+      opacity: 0.65;
+    }
+
+    .site-footer .footer-links a:hover,
+    .site-footer .footer-links a:focus {
+      color: #93d8d0;
+      transform: translateX(-2px);
+    }
+
+    .site-footer .partner-logos {
+      flex: 1;
+      min-width: 220px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .site-footer .partner-strip {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .site-footer .partner-pill {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 40px;
+      padding: 10px 18px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #f0f6f5;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 12px 24px rgba(0, 0, 0, 0.15);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .site-footer .partner-pill svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .site-footer .partner-pill:nth-child(1) {
+      background: rgba(46, 196, 182, 0.16);
+      border-color: rgba(46, 196, 182, 0.45);
+    }
+
+    .site-footer .partner-pill:nth-child(2) {
+      background: rgba(255, 159, 67, 0.16);
+      border-color: rgba(255, 159, 67, 0.45);
+    }
+
+    .site-footer .partner-pill:nth-child(3) {
+      background: rgba(84, 109, 229, 0.18);
+      border-color: rgba(84, 109, 229, 0.45);
+    }
+
+    .site-footer .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .site-footer .footer-bottom small {
+      font-weight: 500;
+    }
+
+    .site-footer .footer-bottom a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-footer .footer-bottom a:hover,
+    .site-footer .footer-bottom a:focus {
+      color: #93d8d0;
+    }
+
+    @media (max-width: 768px) {
+      .site-footer .footer-container {
+        padding: 40px 0 28px;
+      }
+
+      .site-footer .footer-top {
+        flex-direction: column;
+      }
+
+      .site-footer .partner-strip {
+        justify-content: flex-start;
+      }
+
+      .site-footer .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="شعار منصة مدار" loading="lazy" />
+        <p>
+          مدار تجمع إدارة العقار، بيانات الذكاء الاصطناعي، وخدمة المعاونين في تجربةٍ واحدة تمنح ملاك العقار رؤيةً أوضح وتحكماً أسرع.
+        </p>
+      </div>
+      <div class="footer-links">
+        <h4>روابط سريعة</h4>
+        <a href="#privacy" title="سياسة الخصوصية">Privacy Policy</a>
+        <a href="assistants.html" title="الدعم الفني">Support</a>
+        <a href="contact.html" title="تواصل معنا">Contact</a>
+      </div>
+      <div class="partner-logos">
+        <h4>شركاء الابتكار</h4>
+        <div class="partner-strip">
+          <span class="partner-pill" role="img" aria-label="Nova Estates">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="grad-nova" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#48d1c8" />
+                  <stop offset="100%" stop-color="#1f9a8d" />
+                </linearGradient>
+              </defs>
+              <path fill="url(#grad-nova)" d="M6 30L24 6l18 24-18 12z" />
+            </svg>
+            Nova Estates
+          </span>
+          <span class="partner-pill" role="img" aria-label="Sahara Build">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path fill="#ff9f43" d="M6 40V18l18-10 18 10v22H30V28h-6v12z" />
+              <path fill="#ffd8a6" d="M18 40V24h12v16z" />
+            </svg>
+            Sahara Build
+          </span>
+          <span class="partner-pill" role="img" aria-label="Urban Pulse">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="6" y="18" width="8" height="20" fill="#546de5" />
+              <rect x="20" y="10" width="8" height="28" fill="#879fff" />
+              <rect x="34" y="22" width="8" height="16" fill="#3a52c7" />
+            </svg>
+            Urban Pulse
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>© <span id="footerYear">2024</span> Modar. جميع الحقوق محفوظة.</small>
+      <span>مؤمن بواسطة طبقات تشفير ومعايير SOC2.</span>
+    </div>
+  </div>
+</footer>
+<script>
+  (function updateYear() {
+    try {
+      var yearSpan = document.getElementById('footerYear');
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+    } catch (e) {
+      console.error('Footer year update failed', e);
+    }
+  })();
+</script>
