@@ -1,0 +1,50 @@
+<div class="page page-light">
+  <div class="container">
+    <!-- شريط عنوان -->
+    <div class="page-head">
+      <h1>المعاونون</h1>
+      <span class="badge tip">💬 لديك رسالة جديدة من المعاون محمد</span>
+    </div>
+
+    <!-- شبكة المعاونين -->
+    <div id="assistants-grid" class="assistants-grid">
+      <!-- يتم حقن البطاقات عبر JS -->
+    </div>
+
+    <!-- بطاقة إضافة معاون -->
+    <button class="card add-card" id="openAddAssistant">
+      <div class="avatar add">+</div>
+      <div class="title">إضافة معاون</div>
+    </button>
+  </div>
+</div>
+
+<!-- نافذة الإضافة -->
+<div class="modal" id="addAssistantModal" aria-hidden="true">
+  <div class="modal-body">
+    <button class="modal-close" id="closeAddAssistant">×</button>
+    <h3>إضافة معاون</h3>
+    <form id="addAssistantForm">
+      <div class="field">
+        <label>الاسم</label>
+        <input type="text" name="name" required />
+      </div>
+      <div class="field">
+        <label>الدور</label>
+        <select name="role" required>
+          <option value="مدير صيانة">مدير صيانة</option>
+          <option value="محاسب">محاسب</option>
+          <option value="مشرف عقار">مشرف عقار</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>رقم الجوال</label>
+        <input type="tel" name="phone" placeholder="05xxxxxxxx" required />
+      </div>
+      <div class="actions">
+        <button type="button" class="btn ghost" id="cancelAddAssistant">إلغاء</button>
+        <button type="submit" class="btn primary">حفظ</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="page page-light">
+  <div class="container">
+    <a class="btn ghost" href="assistants.html">← رجوع</a>
+    <div class="card" style="margin-top:16px">
+      <div class="avatar" id="apAvatar">A</div>
+      <div class="title" id="apName">اسم المعاون</div>
+      <div class="role" id="apRole">الدور</div>
+      <div class="buttons" style="margin-top:12px">
+        <a class="btn primary" id="apChat" href="#">مراسلة</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // قراءة المعرف من الرابط وعرض البيانات
+  (function(){
+    const params = new URLSearchParams(location.search);
+    const id = params.get('id');
+    const list = JSON.parse(localStorage.getItem('modar_assistants')||'[]');
+    const a = list.find(x=>x.id===id);
+    if(!a) return;
+    document.getElementById('apAvatar').textContent = a.name[0];
+    document.getElementById('apName').textContent = a.name;
+    document.getElementById('apRole').textContent = a.role;
+    document.getElementById('apChat').href = 'chat.html?to='+encodeURIComponent(a.name);
+  })();
+</script>

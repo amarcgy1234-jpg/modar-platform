@@ -1,0 +1,51 @@
+/* ---- Assistants ---- */
+.page-light { background: #e7f2ef; min-height: 100vh; padding: 40px 0; }
+.page-head { display:flex; align-items:center; gap:16px; margin-bottom:20px; }
+.page-head h1 { margin:0; color:#19183b; }
+.badge.tip { background:#a1c2bd33; color:#19183b; padding:6px 10px; border-radius:12px; font-size:14px; }
+
+.assistants-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap:16px;
+}
+
+.card {
+  background:#fff;
+  border-radius:18px;
+  padding:18px;
+  box-shadow: 0 10px 25px rgba(25,24,59,.08);
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+}
+
+.avatar {
+  width:96px; height:96px; border-radius:50%;
+  background: radial-gradient(circle at 30% 30%, #8b3f87, #3b1f49);
+  display:grid; place-items:center; color:#fff; font-size:44px; user-select:none;
+}
+.avatar.img { background:#e7f2ef; overflow:hidden; }
+.avatar.img img { width:100%; height:100%; object-fit:cover; }
+.title { margin-top:10px; color:#19183b; font-weight:700; }
+.role { color:#708993; margin-top:2px; font-size:14px; }
+.card .buttons { margin-top:12px; display:flex; gap:8px; flex-wrap:wrap; justify-content:center; }
+
+.btn { border:1px solid transparent; padding:8px 12px; border-radius:10px; font-size:14px; cursor:pointer; }
+.btn.primary { background:#19183b; color:#e7f2ef; }
+.btn.ghost { background:#fff; border-color:#a1c2bd; color:#19183b; }
+.btn.warn { background:#fff0f3; border-color:#e38; color:#b0143a; }
+
+.add-card { border:2px dashed #a1c2bd; background:#f7fbfa; }
+.add-card .avatar.add { background:#708993; }
+.add-card .title { color:#708993; }
+
+/* Modal */
+.modal { position:fixed; inset:0; background:rgba(0,0,0,.25); display:none; align-items:center; justify-content:center; padding:16px; z-index:99; }
+.modal.show { display:flex; }
+.modal-body { background:#fff; border-radius:18px; padding:24px; width:min(520px, 100%); position:relative; }
+.modal-close { position:absolute; top:8px; left:8px; border:0; background:transparent; font-size:28px; line-height:1; cursor:pointer; color:#708993; }
+.field { display:flex; flex-direction:column; gap:6px; margin:10px 0; }
+.field label { color:#19183b; font-weight:700; }
+.field input, .field select {
+  border:1px solid #a1c2bd; border-radius:10px; padding:10px 12px; background:#f9fdfc;
+}
+.actions { display:flex; gap:8px; justify-content:flex-end; margin-top:12px; }

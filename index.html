@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modar | منصة إدارة العقار</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- شريط علوي -->
+  <header class="navbar">
+    <a href="#home" class="brand">
+      <img src="logo.png" alt="شعار مدار" class="brand-logo">
+      <span>Modar</span>
+    </a>
+
+    <nav id="nav" class="nav-links">
+      <a href="#home">الرئيسية</a>
+      <a href="#features">المزايا</a>
+      <a href="#analytics">تحليلات + أسعار AI</a>
+      <a href="#assistants">المعاونون</a>
+      <a href="#properties">العقارات</a>
+      <a href="#chat">المحادثة</a>
+      <a href="#pricing" class="btn small">الأسعار</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="القائمة">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- قسم الهيرو -->
+  <section id="home" class="hero">
+    <!-- موجة خلفية -->
+    <div class="waves">
+      <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="wave wave1">
+        <path d="M0,224L40,224C80,224,160,224,240,197.3C320,171,400,117,480,117.3C560,117,640,171,720,202.7C800,235,880,245,960,240C1040,235,1120,213,1200,213.3C1280,213,1360,235,1400,245.3L1440,256L1440,320L0,320Z" fill="rgba(161,194,189,0.25)"></path>
+      </svg>
+      <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="wave wave2">
+        <path d="M0,256L60,240C120,224,240,192,360,186.7C480,181,600,203,720,208C840,213,960,203,1080,186.7C1200,171,1320,149,1380,138.7L1440,128L1440,320L0,320Z" fill="rgba(112,137,147,0.18)"></path>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <img src="logo.png" alt="شعار مدار" class="hero-logo">
+      <h1>مدار حيث يُدار العقار</h1>
+      <p>منصة موحّدة لإدارة العقارات، المعاونين، الصيانة التنبؤية، والبيانات المالية — في مكان واحد.</p>
+      <a href="#features" class="btn cta">اكتشف المزيد</a>
+    </div>
+  </section>
+
+  <!-- المزايا -->
+  <section id="features" class="section">
+    <div class="container">
+      <h2>لماذا <span>Modar</span>؟</h2>
+      <div class="grid cards">
+        <div class="card">
+          <h3>توحيد المنظومة</h3>
+          <p>إدارة المعاونين، العقود، الصيانة، المدفوعات، والعملاء عبر لوحة واحدة.</p>
+        </div>
+        <div class="card">
+          <h3>صيانة تنبؤية</h3>
+          <p>نموذج AI يعتمد على بيانات الاستهلاك لتنبيهك قبل الأعطال.</p>
+        </div>
+        <div class="card">
+          <h3>شفافية مالية</h3>
+          <p>تقارير دخل/مصروفات، تتبّع فواتير، وتوزيع تكاليف المرافق المشتركة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- تحليلات + أسعار AI (مكان للصفحة المنفصلة لاحقاً) -->
+  <section id="analytics" class="section alt">
+    <div class="container">
+      <h2>تحليلات + أسعار الذكاء الاصطناعي</h2>
+      <p class="lead">محرّك تحليلي يعرض مؤشرات الأداء، وتوقعات الصيانة، وخطط الاشتراك في نماذج AI.</p>
+      <div class="grid cards">
+        <div class="card">
+          <h3>لوحة مؤشرات</h3>
+          <p>زمن المعالجة، SLA، معدّل الأعطال، واستهلاك الطاقة لكل عقار.</p>
+        </div>
+        <div class="card">
+          <h3>حزم AI</h3>
+          <p>أساسي / متوسط / متقدم — وفق عدد الوحدات وقراءات الاستهلاك.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- المعاونون -->
+  <section id="assistants" class="section">
+    <div class="container">
+      <h2>المعاونون</h2>
+      <p class="lead">أضف معاونين موثّقين لإدارة العقارات نيابةً عنك عند السفر أو الإنشغال.</p>
+      <div class="grid mini">
+        <div class="pill">تعيين مهام</div>
+        <div class="pill">صلاحيات مرنة</div>
+        <div class="pill">سجل نشاط</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- العقارات -->
+  <section id="properties" class="section alt">
+    <div class="container">
+      <h2>عقاراتك</h2>
+      <p class="lead">عرض سريع لكل الوحدات مع الحالة، الإشغال، والتنبيهات.</p>
+      <div class="grid cards">
+        <div class="card"><h3>عمارة مكة</h3><p>تنبيه: فحص تكييف خلال ٧ أيام.</p></div>
+        <div class="card"><h3>عمارة جدة</h3><p>الفواتير مدفوعة حتى الشهر الحالي.</p></div>
+        <div class="card"><h3>عمارة الباحة</h3><p>حجز صيانة مجدولة الثلاثاء.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- المحادثة -->
+  <section id="chat" class="section">
+    <div class="container">
+      <h2>محادثة وإشعارات</h2>
+      <p class="lead">قناة تواصل موحّدة مع المستأجرين والمعاونين، وإشعارات فورية لكل حدث.</p>
+      <a href="#pricing" class="btn">جرّب النسخة التجريبية</a>
+    </div>
+  </section>
+
+  <!-- الأسعار -->
+  <section id="pricing" class="section alt">
+    <div class="container">
+      <h2>الأسعار</h2>
+      <div class="grid prices">
+        <div class="price-card">
+          <h3>الأساسية</h3>
+          <ul>
+            <li>إدارة عقارين</li>
+            <li>إشعارات أساسية</li>
+            <li>تقارير شهرية</li>
+          </ul>
+          <button class="btn small">اشترك</button>
+        </div>
+        <div class="price-card best">
+          <div class="badge">أفضل قيمة</div>
+          <h3>المتوسطة</h3>
+          <ul>
+            <li>حتى ٦ عقارات</li>
+            <li>نماذج AI أساسية</li>
+            <li>لوحة تحليلات</li>
+          </ul>
+          <button class="btn small">اشترك</button>
+        </div>
+        <div class="price-card">
+          <h3>المتقدمة</h3>
+          <ul>
+            <li>غير محدود</li>
+            <li>صيانة تنبؤية متقدمة</li>
+            <li>تكامل APIs</li>
+          </ul>
+          <button class="btn small">اشترك</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- تذييل -->
+  <footer class="footer">
+    <div class="container">
+      <p>© Modar — جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
