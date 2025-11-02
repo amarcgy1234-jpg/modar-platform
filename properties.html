@@ -1,28 +1,48 @@
-<div class="page page-light">
-  <div class="container">
-    <a class="btn ghost" href="assistants.html">← رجوع</a>
-    <div class="card" style="margin-top:16px">
-      <div class="avatar" id="apAvatar">A</div>
-      <div class="title" id="apName">اسم المعاون</div>
-      <div class="role" id="apRole">الدور</div>
-      <div class="buttons" style="margin-top:12px">
-        <a class="btn primary" id="apChat" href="#">مراسلة</a>
-      </div>
-    </div>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عقارات Modar</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="properties">
+  <div data-include="assets/partials/header.html"></div>
 
-<script>
-  // قراءة المعرف من الرابط وعرض البيانات
-  (function(){
-    const params = new URLSearchParams(location.search);
-    const id = params.get('id');
-    const list = JSON.parse(localStorage.getItem('modar_assistants')||'[]');
-    const a = list.find(x=>x.id===id);
-    if(!a) return;
-    document.getElementById('apAvatar').textContent = a.name[0];
-    document.getElementById('apName').textContent = a.name;
-    document.getElementById('apRole').textContent = a.role;
-    document.getElementById('apChat').href = 'chat.html?to='+encodeURIComponent(a.name);
-  })();
-</script>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>العقارات المتاحة</h1>
+        <p>تابع حالة كل عقار في محفظتك، ووجّه فرق التشغيل لاتخاذ الإجراءات في الوقت المناسب.</p>
+
+        <div class="grid cards properties-grid" style="margin-top:30px;">
+          <article class="card">
+            <h3>برج النخبة الإداري</h3>
+            <span class="status">مشغول بنسبة 95%</span>
+            <p>برج حديث في قلب المدينة، يحتاج إلى متابعة صيانة المصاعد خلال الربع القادم.</p>
+            <a class="btn" href="#">تفاصيل العقار</a>
+          </article>
+          <article class="card">
+            <h3>مجمع الخزامى السكني</h3>
+            <span class="status">متاح للوحدات العائلية</span>
+            <p>مجمع سكني متكامل الخدمات مع أنظمة ذكية لإدارة الطاقة.</p>
+            <a class="btn" href="#">تفاصيل العقار</a>
+          </article>
+          <article class="card">
+            <h3>مركز العقيق التجاري</h3>
+            <span class="status">قيد التجديد</span>
+            <p>يخضع لتطوير شامل للمساحات الداخلية وتعزيز أنظمة الأمان.</p>
+            <a class="btn" href="#">تفاصيل العقار</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="assets/partials/footer.html"></div>
+  <button class="scroll-top" data-scroll-top aria-label="العودة للأعلى">↑</button>
+
+  <script src="assets/js/include.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>محادثة Modar</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="chat">
+  <div data-include="assets/partials/header.html"></div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>قناة المحادثة</h1>
+        <p>تواصل لحظي بين فرق المعاونين ومديري العقارات لمعالجة التحديثات العاجلة ومتابعة الطلبات.</p>
+
+        <div class="chat-box" style="margin-top:30px;">
+          <div class="chat-history">
+            <div class="message">
+              <strong>ليلى</strong>
+              <p>تم الانتهاء من نظافة المداخل في برج النخبة، ننتظر التقييم.</p>
+            </div>
+            <div class="message user">
+              <strong>مدير المحفظة</strong>
+              <p>رائع! يرجى مشاركة الصور ضمن ملف المهمة.</p>
+            </div>
+            <div class="message">
+              <strong>منصور</strong>
+              <p>فريق الصيانة في الطريق لمركز العقيق لمراجعة نظام الإطفاء.</p>
+            </div>
+          </div>
+          <div class="chat-input">
+            <input type="text" placeholder="اكتب رسالة للمعاونين..." aria-label="حقل كتابة الرسالة" />
+            <button class="btn" type="button">إرسال</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="assets/partials/footer.html"></div>
+  <button class="scroll-top" data-scroll-top aria-label="العودة للأعلى">↑</button>
+
+  <script src="assets/js/include.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

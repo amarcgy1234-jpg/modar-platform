@@ -1,5 +1,47 @@
-<div data-include="assets/partials/header.html"></div>
-<!-- محتوى الصفحة -->
-<div data-include="assets/partials/footer.html"></div>
-<script src="assets/js/include.js"></script>
-<script src="assets/js/app.js"></script>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تواصل معنا | Modar</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="contact">
+  <div data-include="assets/partials/header.html"></div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>تواصل معنا</h1>
+        <p>يسعدنا سماع ملاحظاتك واستفساراتك حول المنصة. عبئ النموذج التالي وسيتواصل فريقنا معك خلال 24 ساعة.</p>
+
+        <form class="contact-form" style="margin-top:30px;">
+          <label>
+            الاسم الكامل
+            <input type="text" name="name" placeholder="اكتب اسمك" required />
+          </label>
+          <label>
+            البريد الإلكتروني
+            <input type="email" name="email" placeholder="example@email.com" required />
+          </label>
+          <label>
+            نوع الاستفسار
+            <input type="text" name="topic" placeholder="دعم فني، تجربة، شراكات..." />
+          </label>
+          <label>
+            الرسالة
+            <textarea name="message" rows="4" placeholder="اكتب رسالتك هنا" required></textarea>
+          </label>
+          <button class="btn" type="submit">إرسال الطلب</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="assets/partials/footer.html"></div>
+  <button class="scroll-top" data-scroll-top aria-label="العودة للأعلى">↑</button>
+
+  <script src="assets/js/include.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

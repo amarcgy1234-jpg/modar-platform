@@ -1,50 +1,46 @@
-<div class="page page-light">
-  <div class="container">
-    <!-- شريط عنوان -->
-    <div class="page-head">
-      <h1>المعاونون</h1>
-      <span class="badge tip">💬 لديك رسالة جديدة من المعاون محمد</span>
-    </div>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>معاونو Modar</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="assistants">
+  <div data-include="assets/partials/header.html"></div>
 
-    <!-- شبكة المعاونين -->
-    <div id="assistants-grid" class="assistants-grid">
-      <!-- يتم حقن البطاقات عبر JS -->
-    </div>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>المعاونون</h1>
+        <p>كوِّن شبكة موثوقة من الخبراء الميدانيين والمستشارين الذين يدعمون استدامة أعمالك العقارية. تستطيع إدارة الوصول، المهام، والمتابعة اللحظية لكل معاونة ومعاون.</p>
 
-    <!-- بطاقة إضافة معاون -->
-    <button class="card add-card" id="openAddAssistant">
-      <div class="avatar add">+</div>
-      <div class="title">إضافة معاون</div>
-    </button>
-  </div>
-</div>
+        <div class="grid assistants-grid" style="margin-top:30px;">
+          <article class="assistant-card">
+            <h3>ليلى</h3>
+            <p>معاونة عمليات — تنسق أعمال النظافة والضيافة في المجمعات السكنية.</p>
+          </article>
+          <article class="assistant-card">
+            <h3>منصور</h3>
+            <p>مشرف صيانة — يدير فرق الفنيين ويتابع تنفيذ المهام وفق SLA.</p>
+          </article>
+          <article class="assistant-card">
+            <h3>جود</h3>
+            <p>محللة أداء — تراقب تقارير الإشغال والدخل الشهري للمحافظ.</p>
+          </article>
+          <article class="assistant-card">
+            <h3>عبدالله</h3>
+            <p>مسؤول علاقات مستأجرين — يستجيب للتذاكر ويقيس مستوى الرضا.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<!-- نافذة الإضافة -->
-<div class="modal" id="addAssistantModal" aria-hidden="true">
-  <div class="modal-body">
-    <button class="modal-close" id="closeAddAssistant">×</button>
-    <h3>إضافة معاون</h3>
-    <form id="addAssistantForm">
-      <div class="field">
-        <label>الاسم</label>
-        <input type="text" name="name" required />
-      </div>
-      <div class="field">
-        <label>الدور</label>
-        <select name="role" required>
-          <option value="مدير صيانة">مدير صيانة</option>
-          <option value="محاسب">محاسب</option>
-          <option value="مشرف عقار">مشرف عقار</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>رقم الجوال</label>
-        <input type="tel" name="phone" placeholder="05xxxxxxxx" required />
-      </div>
-      <div class="actions">
-        <button type="button" class="btn ghost" id="cancelAddAssistant">إلغاء</button>
-        <button type="submit" class="btn primary">حفظ</button>
-      </div>
-    </form>
-  </div>
-</div>
+  <div data-include="assets/partials/footer.html"></div>
+  <button class="scroll-top" data-scroll-top aria-label="العودة للأعلى">↑</button>
+
+  <script src="assets/js/include.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
