@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>المحادثة | Modar</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- هيدر عام إن وُجد -->
+  <header class="navbar">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" class="brand-logo" alt="Modar">
+      <span>Modar</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">الرئيسية</a>
+      <a href="assistants.html">المعاونون</a>
+      <a href="properties.html">العقارات</a>
+      <a href="chat.html" class="btn small">المحادثة</a>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h2>محادثاتي</h2>
+
+      <div id="chatBox" class="chat-box">
+        <!-- سيتم حقن الرسائل هنا -->
+      </div>
+
+      <form id="chatForm" class="chat-form">
+        <input id="chatInput" type="text" placeholder="اكتب رسالتك..." required />
+        <button class="btn" type="submit">إرسال</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container"><p>© Modar — جميع الحقوق محفوظة</p></div>
+  </footer>
+
+  <script src="assets/js/chat.js"></script>
+</body>
+</html>
