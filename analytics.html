@@ -1,79 +1,83 @@
-<div data-include="assets/partials/header.html"></div>
-<!-- محتوى الصفحة -->
-<div data-include="assets/partials/footer.html"></div>
-<script src="assets/js/include.js"></script>
-<script src="assets/js/app.js"></script>
-diff --git a/analytics.html b/analytics.html
-index 7391c10fa2e73a808c43b27b3b8f19bfd640687a..c192c42d94e070823efead3635ef73c4584a6218 100644
---- a/analytics.html
-+++ b/analytics.html
-@@ -1,5 +1,64 @@
--<div data-include="assets/partials/header.html"></div>
--<!-- محتوى الصفحة -->
--<div data-include="assets/partials/footer.html"></div>
--<script src="assets/js/include.js"></script>
--<script src="assets/js/app.js"></script>
-+<!DOCTYPE html>
-+<html lang="ar" dir="rtl">
-+<head>
-+  <meta charset="UTF-8" />
-+  <meta name="viewport" content="width=device-width, initial-scale=1" />
-+  <title>Modar | تحليلات اليوم</title>
-+  <link rel="preconnect" href="https://fonts.googleapis.com" />
-+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
-+  <link rel="stylesheet" href="assets/css/style.css" />
-+</head>
-+<body>
-+  <div data-include="assets/partials/header.html"></div>
-+
-+  <main class="section" style="padding-top:7rem;">
-+    <div class="container">
-+      <div class="section-header">
-+        <span class="eyebrow">تحليلات اليوم</span>
-+        <h1 class="section-title">مرحبًا أستاذ عبد الله 👋</h1>
-+        <p class="section-subtitle">هذه لمحة سريعة عن أداء عقاراتك اليوم.</p>
-+      </div>
-+
-+      <div class="summary-block">
-+        <p>أهلًا أستاذ عبد الله، انتهى فريق الصيانة من معالجة طلب التسريب في عمارة مكة، وما زالت مهمة المراجعة المالية بانتظار اعتمادك.</p>
-+      </div>
-+
-+      <div class="grid two">
-+        <div class="card">
-+          <h3>حالة المهام</h3>
-+          <canvas id="tasksPie" height="280" aria-label="مخطط حالة المهام" role="img"></canvas>
-+        </div>
-+        <div class="card">
-+          <h3>صافي تكاليف العقارات</h3>
-+          <canvas id="costBar" height="280" aria-label="مخطط صافي التكاليف" role="img"></canvas>
-+        </div>
-+      </div>
-+
-+      <div class="grid two" style="margin-top:2rem;">
-+        <div class="card">
-+          <h3>مؤشرات اليوم</h3>
-+          <ul class="card-list">
-+            <li>📈 ارتفعت نسبة الإشغال في عمارة جدة إلى 87٪.</li>
-+            <li>🔔 يوجد 3 طلبات صيانة قيد التنفيذ.</li>
-+            <li>💬 تلقّيت رسالتين جديدتين من المعاونين.</li>
-+          </ul>
-+        </div>
-+        <div class="card">
-+          <h3>أقرب المهام القادمة</h3>
-+          <ul class="card-list">
-+            <li>مراجعة تقرير الصيانة لعمارة مكة — اليوم الساعة 5 مساءً.</li>
-+            <li>متابعة دفعة مستأجر الشقة 3B — غدًا الساعة 10 صباحًا.</li>
-+            <li>اجتماع مع المعاون مها — الأربعاء الساعة 1 مساءً.</li>
-+          </ul>
-+        </div>
-+      </div>
-+    </div>
-+  </main>
-+
-+  <div data-include="assets/partials/footer.html"></div>
-+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-+  <script src="assets/js/include.js"></script>
-+  <script src="assets/js/app.js"></script>
-+</body>
-+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة تحليلات مودار</title>
+  <meta name="description" content="اكتشف مؤشرات الأداء الرئيسية التي يوفرها مودار للمحافظ العقارية." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div data-include="assets/partials/header.html"></div>
+  <main class="page">
+    <section class="section">
+      <div class="container">
+        <span class="badge">التحليلات</span>
+        <h1>لوحة معلومات تساعدك على اتخاذ القرار</h1>
+        <p>مودار يقدم رؤية شاملة للأداء التشغيلي والمالي، مع تنبيهات مخصصة للفرص والمخاطر.</p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <table class="table" aria-label="مؤشرات الأداء">
+          <thead>
+            <tr>
+              <th scope="col">المؤشر</th>
+              <th scope="col">الوصف</th>
+              <th scope="col">أحدث قيمة</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>العائد السنوي على الاستثمار</td>
+              <td>نسبة الأرباح الصافية على رأس المال المستثمر خلال 12 شهرًا.</td>
+              <td>11.7%</td>
+            </tr>
+            <tr>
+              <td>نسبة الإشغال</td>
+              <td>متوسط الإشغال الشهري للمحفظة الكاملة.</td>
+              <td>88%</td>
+            </tr>
+            <tr>
+              <td>زمن استجابة الفريق</td>
+              <td>مدة استجابة المساعدين والفرق للعملاء المحتملين.</td>
+              <td>7 دقائق</td>
+            </tr>
+            <tr>
+              <td>حجم صفقات الربع</td>
+              <td>قيمة الصفقات المغلقة خلال آخر 90 يومًا.</td>
+              <td>34 مليون ريال</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cards-grid">
+          <div class="card">
+            <h3>تنبيهات ذكية</h3>
+            <p>تصل إشعارات فورية عند انخفاض الإشغال عن 80% أو تأخر الصيانة أكثر من 48 ساعة.</p>
+          </div>
+          <div class="card">
+            <h3>توقعات نقدية</h3>
+            <p>نماذج تنبؤية ترسم سيناريوهات لثلاثة أشهر قادمة باستخدام بيانات السوق الحية.</p>
+          </div>
+          <div class="card">
+            <h3>تقارير قابلة للمشاركة</h3>
+            <p>صدّر تقارير العلامة البيضاء إلى المستثمرين بنقرة واحدة مع شرح مبسط باللغة العربية.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div data-include="assets/partials/footer.html"></div>
+  <script src="assets/js/include.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>إضافة عقار جديد | مودار</title>
+  <meta name="description" content="أضف عقارًا جديدًا إلى محفظتك في مودار وحدد من يديره من المساعدين الرقميين." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div data-include="assets/partials/header.html"></div>
+  <main class="page">
+    <section class="section">
+      <div class="container">
+        <span class="badge">إدخال سريع</span>
+        <h1>إضافة عقار جديد</h1>
+        <p>املأ تفاصيل العقار ليقوم مودار بإنشاء ملف كامل، توقعات مالية، وخطة متابعة للعملاء المحتملين.</p>
+        <div class="form-card">
+          <form>
+            <div class="form-group">
+              <label for="property-name">اسم العقار</label>
+              <input id="property-name" type="text" placeholder="مثال: برج الوادي" required />
+            </div>
+            <div class="form-group">
+              <label for="property-location">الموقع</label>
+              <input id="property-location" type="text" placeholder="المدينة، الحي" required />
+            </div>
+            <div class="form-group">
+              <label for="property-category">الفئة</label>
+              <select id="property-category">
+                <option value="residential">سكني</option>
+                <option value="commercial">تجاري</option>
+                <option value="industrial">صناعي</option>
+                <option value="hospitality">ضيافة</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="property-price">السعر أو قيمة الاستثمار (بالعملة المحلية)</label>
+              <input id="property-price" type="number" min="0" step="1000" />
+            </div>
+            <div class="form-group">
+              <label for="property-description">وصف مختصر</label>
+              <textarea id="property-description" placeholder="أدخل أبرز المزايا والخدمات المتوفرة"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="property-assistant">المعاون الذكي المسؤول</label>
+              <select id="property-assistant">
+                <option value="nada">ندى – مختصة المبيعات</option>
+                <option value="fahad">فهد – خبير المستثمرين</option>
+                <option value="lina">لينا – مسؤولة تجربة الضيوف</option>
+              </select>
+            </div>
+            <button class="btn" type="submit">حفظ العقار</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div data-include="assets/partials/footer.html"></div>
+  <script src="assets/js/include.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

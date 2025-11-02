@@ -1,28 +1,90 @@
-<div class="page page-light">
-  <div class="container">
-    <a class="btn ghost" href="assistants.html">← رجوع</a>
-    <div class="card" style="margin-top:16px">
-      <div class="avatar" id="apAvatar">A</div>
-      <div class="title" id="apName">اسم المعاون</div>
-      <div class="role" id="apRole">الدور</div>
-      <div class="buttons" style="margin-top:12px">
-        <a class="btn primary" id="apChat" href="#">مراسلة</a>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>قائمة العقارات | مودار</title>
+  <meta name="description" content="استعرض العقارات المدرجة في مودار مع إمكانات التصفية الذكية وإدارة الحالات." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div data-include="assets/partials/header.html"></div>
+  <main class="page">
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h1>عقاراتي</h1>
+          <p>فلتر واعرض ممتلكاتك في لحظات، وارسلها مباشرة إلى مساعدين مودار للمتابعة مع العملاء.</p>
+        </div>
+        <div class="form-card">
+          <form class="search" role="search">
+            <div class="form-group">
+              <label for="property-keyword">ابحث باسم العقار أو المدينة</label>
+              <input id="property-keyword" type="search" placeholder="مثال: برج الخليج، جدة" />
+            </div>
+            <div class="form-group" style="display:grid; gap:16px; grid-template-columns:repeat(auto-fit, minmax(160px,1fr));">
+              <div>
+                <label for="property-type">نوع العقار</label>
+                <select id="property-type">
+                  <option value="">الكل</option>
+                  <option value="residential">سكني</option>
+                  <option value="commercial">تجاري</option>
+                  <option value="hospitality">ضيافة</option>
+                </select>
+              </div>
+              <div>
+                <label for="property-status">حالة العرض</label>
+                <select id="property-status">
+                  <option value="">الكل</option>
+                  <option value="available">متاح</option>
+                  <option value="reserved">محجوز</option>
+                  <option value="sold">مباع</option>
+                </select>
+              </div>
+              <div>
+                <label for="property-city">المدينة</label>
+                <input id="property-city" type="text" placeholder="الرياض، دبي، الكويت..." />
+              </div>
+            </div>
+            <button class="btn" type="submit">بحث تجريبي</button>
+          </form>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
+    </section>
 
-<script>
-  // قراءة المعرف من الرابط وعرض البيانات
-  (function(){
-    const params = new URLSearchParams(location.search);
-    const id = params.get('id');
-    const list = JSON.parse(localStorage.getItem('modar_assistants')||'[]');
-    const a = list.find(x=>x.id===id);
-    if(!a) return;
-    document.getElementById('apAvatar').textContent = a.name[0];
-    document.getElementById('apName').textContent = a.name;
-    document.getElementById('apRole').textContent = a.role;
-    document.getElementById('apChat').href = 'chat.html?to='+encodeURIComponent(a.name);
-  })();
-</script>
+    <section class="section">
+      <div class="container">
+        <div class="cards-grid">
+          <div class="card">
+            <span class="badge">سكني • متاح</span>
+            <h3>شقق سكاي لاين</h3>
+            <p>برج سكني في قلب الرياض مع وحدات مفروشة بالكامل وخدمات فندقية للمقيمين.</p>
+            <p><strong>العائد المتوقع:</strong> 9.4% سنويًا</p>
+            <a class="btn secondary" href="property-details.html">عرض التفاصيل</a>
+          </div>
+          <div class="card">
+            <span class="badge">تجاري • محجوز</span>
+            <h3>مركز واحة الأعمال</h3>
+            <p>مساحات مكتبية مرنة في دبي مارينا مع اشتراك مشترك في صالات مودار الافتراضية.</p>
+            <p><strong>العائد المتوقع:</strong> 12.1% سنويًا</p>
+            <a class="btn secondary" href="property-details.html">عرض التفاصيل</a>
+          </div>
+          <div class="card">
+            <span class="badge">ضيافة • متاح</span>
+            <h3>فلل الشاطئ الذكية</h3>
+            <p>منتجع خاص بإطلالة بحرية في جدة مع تكامل تام مع مساعدين مودار للضيوف.</p>
+            <p><strong>العائد المتوقع:</strong> 15.6% سنويًا</p>
+            <a class="btn secondary" href="property-details.html">عرض التفاصيل</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div data-include="assets/partials/footer.html"></div>
+  <script src="assets/js/include.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
